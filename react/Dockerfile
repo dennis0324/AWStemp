@@ -7,4 +7,6 @@ RUN npm install --production=true
 COPY . . 
 run npm run build
 
+
+
 CMD ["npm","run","start:prod"]

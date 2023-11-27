@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app-prod:
+      container_name: react_bare_matel
+      image: react_bare_matel:1.0.0
+      build:
+        context: react
+        target: production
+        # dockerfile: Dockerfile
+      # command: npm run start:prod
+      ports:
+        - 3000:3000
+      # networks:
+      #   - shared-network
+      restart: unless-stopped
